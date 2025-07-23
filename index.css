@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+canvas {
+    background-color: #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.plinko-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.score-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(to right, #22c55e, #16a34a);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+.score-container:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 640px) {
+    canvas {
+    width: 100%;
+    height: auto;
+    }
+    .plinko-container {
+    padding: 1rem;
+    }
+    .score-container {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    }
+}
